@@ -12,11 +12,13 @@ public class FirstProject {
     public static final String hostname = "localhost";
     public static Jedis jedis = null;
 
-    public static final String dbPath = "./resources/NYSE_20210301.csv1";
+    public static final String dbPath = "./resources/NYSE_20210301.csv";
 
     public static void startDb(){
         //Connecting to Redis on localhost
         jedis = new Jedis(hostname);
+        //just to delete the data saved in the old db
+        jedis.flushAll();
         File f = new File(dbPath);
         if(!f.exists() || f.isDirectory()){
             System.out.println("could not find file of db so will create a new one");
@@ -45,18 +47,21 @@ public class FirstProject {
                 if(command[0].equals("create")){
                     if(command.length==3) {
                         System.out.println(create(command[1], command[2]));
+                        System.out.println();
                     }
                 }else if(command[0].equals("delete")){
                     if(command.length==2) {
                         System.out.println(delete(command[1]));
+                        System.out.println();
                     }
                 }else if(command[0].equals("update")){
                     if(command.length==3) {
                         System.out.println(update(command[1], command[2]));
+                        System.out.println();
                     }
                 }else if(command[0].equals("fetch")){
                     if(command.length==2) {
-                        System.out.println(fetch(command[1]));
+                        fetch(command[1]);
                     }
                 }
                 //since it is said the only those 4 command are acceptable, if any other ones
@@ -93,12 +98,13 @@ public class FirstProject {
     }
 
 
-    private static boolean fetch(String key){
+    private static void fetch(String key){
         if (jedis.exists(key)){
+            System.out.println("true");
             System.out.println(jedis.get(key));
-            return true;
+            System.out.println();
         }else{
-            return false;
+            System.out.println("false\n");
         }
     }
 

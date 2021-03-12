@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e786f66b-2d99-4803-bdf6-d75af22b4007" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/NYSE_20210301 - Copy.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FirstProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstProject.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FirstProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="57" column="40" lean-forward="true" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+            <state relative-caret-position="174">
+              <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#readAllDataAtOnce#0;class#FirstProject#0" />
@@ -43,6 +44,7 @@
     <findStrings>
       <find>return</find>
       <find>came</find>
+      <find>fetch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,23 +132,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615569978532</updated>
-      <workItem from="1615569979769" duration="6730000" />
+      <workItem from="1615569979769" duration="8222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6730000" />
+    <option name="totallyTimeSpent" value="8222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -178,8 +179,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/FirstProject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="57" column="40" lean-forward="true" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+        <state relative-caret-position="174">
+          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#readAllDataAtOnce#0;class#FirstProject#0" />
