@@ -1,8 +1,7 @@
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-
+import java.util.Scanner;
 import java.io.File;
 import java.io.FileReader;
 import java.util.List;
@@ -15,7 +14,7 @@ public class FirstProject {
 
     public static final String dbPath = "./resources/NYSE_20210301.csv";
 
-    public static boolean startDb(){
+    public static void startDb(){
         //Connecting to Redis on localhost
         jedis = new Jedis(hostname);
         File f = new File(dbPath);
@@ -30,18 +29,38 @@ public class FirstProject {
                     //go and add them to db
                     //adding:
                     jedis.set(data.get(i)[0], data.get(i)[1]);
-
                 }
             }
-            return true;
         }
 
-        return true;
     }
 
     public static void main(String[] args) {
-
+        //now the jedis object was created
         startDb();
+        Scanner scanner = new Scanner(System.in);
+        while(true){
+            String[] command = scanner.nextLine().split(" ");
+            if (command.length>=2){
+                if(command[0].equals("create")){
+                    System.out.println("came to create");
+                    if(command.length==3) {
+                        create(command[1], command[2]);
+                    }
+                }else if(command[0].equals("delete")){
+                    System.out.println("came to delete");
+
+                }else if(command[0].equals("update")){
+                    System.out.println("came to update");
+
+                }else if(command[0].equals("fetch")){
+                    System.out.println("came to fetch");
+
+                }
+                //since it is said the only those 4 command are acceptable, if any other ones
+                //are entered, will be ignored
+            }
+        }
     }
 
 
@@ -72,21 +91,23 @@ public class FirstProject {
     }
 
 
-//    private static boolean delete(String key){
-//
-//    }
-//
-//    private static boolean fetch(String key){
-//
-//    }
-//
-//    private static boolean update(String key, String value){
-//
-//    }
-//
+    private static boolean fetch(String key){
+        return true;
+    }
+
+    private static boolean delete(String key){
+        return true;
+    }
+
+    private static boolean update(String key, String value){
+        return true;
+    }
 
 
-//    private static boolean create(String key, String value){
-//
-//    }
+
+    private static boolean create(String key, String value){
+        System.out.println(key);
+        System.out.println(value);
+        return true;
+    }
 }
