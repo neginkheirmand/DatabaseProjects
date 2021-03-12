@@ -3,6 +3,7 @@ import com.opencsv.CSVReaderBuilder;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+import java.io.File;
 import java.io.FileReader;
 import java.util.List;
 
@@ -10,26 +11,41 @@ public class FirstProject {
 
     //address of your redis server
     public static final String hostname = "localhost";
-    public static final int port = 6363;
-    public static final int redisDB = 2;
+    public static Jedis jedis = null;
 
-    //the jedis connection pool..
-    private static JedisPool pool = null;
+    public static final String dbPath = "./resources/NYSE_20210301.csv";
 
-    private static Jedis jedis = null;
-    public void JedisMain() {
-        //configure our pool connection
-//        pool = new JedisPool(redisHost, redisPort);
+    public static boolean startDb(){
+        //Connecting to Redis on localhost
+        jedis = new Jedis(hostname);
+        File f = new File(dbPath);
+        if(!f.exists() || f.isDirectory()){
+            System.out.println("could not find file of db so will create a new one");
+        }else {
+            //at the start we should load all the data stored in the csv file
+            List<String[]> data = readAllDataAtOnce(dbPath);
+            //now load it into cache(redis db) for that we should manually add each of the key value pairs
+            for (int i = 0; i < 10; i++) {
+                if (data.get(i)[0].length() != 0 && data.get(i)[1].length() != 0) {
+                    //go and add them to db
+                    //adding:
+                    jedis.set(data.get(i)[0], data.get(i)[1]);
 
+                }
+            }
+            return true;
+        }
+
+        return true;
     }
+
     public static void main(String[] args) {
-        //get a jedis connection jedis connection pool
-//        jedis = pool.getResource();
-        readAllDataAtOnce("./resources/NYSE_20210301.csv");
+
+        startDb();
     }
 
 
-    public static void readAllDataAtOnce(String file)
+    public static List<String[]> readAllDataAtOnce(String file)
     {
         try {
             // Create an object of file reader
@@ -40,17 +56,18 @@ public class FirstProject {
             CSVReader csvReader = new CSVReaderBuilder(filereader)
                     .build();
             List<String[]> allData = csvReader.readAll();
-
-            // print Data
-            for (String[] row : allData) {
-                for (String cell : row) {
-                    System.out.print(cell + "\t");
-                }
-                System.out.println();
-            }
+            return allData;
+//
+//            // print Data
+//            for (String[] row : allData) {
+//                for (String cell : row) {
+//                    System.out.print(cell + "\t");
+//                }
+//                System.out.println();
+//            }
         }
         catch (Exception e) {
-            e.printStackTrace();
+            return null;
         }
     }
 
@@ -70,25 +87,6 @@ public class FirstProject {
 
 
 //    private static boolean create(String key, String value){
-//        try {
-//            //save to redis
-//            jedis.sadd(key, member1, member2, member3);
 //
-//            //after saving the data, lets retrieve them to be sure that it has really added in redis
-//            Set members = jedis.smembers(key);
-//            for (String member : members) {
-//                System.out.println(member);
-//            }
-//        } catch (JedisException e) {
-//            //if something wrong happen, return it back to the pool
-//            if (null != jedis) {
-//                pool.returnBrokenResource(jedis);
-//                jedis = null;
-//            }
-//        } finally {
-//            ///it's important to return the Jedis instance to the pool once you've finished using it
-//            if (null != jedis)
-//                pool.returnResource(jedis);
-//        }
 //    }
 }
