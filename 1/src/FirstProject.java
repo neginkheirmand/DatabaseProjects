@@ -12,7 +12,7 @@ public class FirstProject {
     public static final String hostname = "localhost";
     public static Jedis jedis = null;
 
-    public static final String dbPath = "./resources/NYSE_20210301.csv";
+    public static final String dbPath = "./resources/NYSE_20210301.csv1";
 
     public static void startDb(){
         //Connecting to Redis on localhost
@@ -43,19 +43,21 @@ public class FirstProject {
             String[] command = scanner.nextLine().split(" ");
             if (command.length>=2){
                 if(command[0].equals("create")){
-                    System.out.println("came to create");
                     if(command.length==3) {
-                        create(command[1], command[2]);
+                        System.out.println(create(command[1], command[2]));
                     }
                 }else if(command[0].equals("delete")){
-                    System.out.println("came to delete");
-
+                    if(command.length==2) {
+                        System.out.println(delete(command[1]));
+                    }
                 }else if(command[0].equals("update")){
-                    System.out.println("came to update");
-
+                    if(command.length==3) {
+                        System.out.println(update(command[1], command[2]));
+                    }
                 }else if(command[0].equals("fetch")){
-                    System.out.println("came to fetch");
-
+                    if(command.length==2) {
+                        System.out.println(fetch(command[1]));
+                    }
                 }
                 //since it is said the only those 4 command are acceptable, if any other ones
                 //are entered, will be ignored
@@ -92,22 +94,37 @@ public class FirstProject {
 
 
     private static boolean fetch(String key){
-        return true;
+        if (jedis.exists(key)){
+            System.out.println(jedis.get(key));
+            return true;
+        }else{
+            return false;
+        }
     }
 
     private static boolean delete(String key){
-        return true;
+        if (jedis.exists(key)){
+            jedis.del(key);
+            return true;
+        }else{
+            return false;
+        }
     }
 
     private static boolean update(String key, String value){
-        return true;
+        if (jedis.exists(key)){
+            jedis.set(key, value);
+            return true;
+        }else{
+            return false;
+        }
     }
 
-
-
     private static boolean create(String key, String value){
-        System.out.println(key);
-        System.out.println(value);
+        if (jedis.exists(key)){
+            return false;
+        }
+        jedis.append(key, value);
         return true;
     }
 }
