@@ -1,2 +1,2 @@
 INSERT INTO TWEET(Content, Username, ParentID)
-VALUES 	("I am soooo happy that you say that", "Bad Karma", 1);
+VALUES 	("just passed by and wanted to say hello", "BeenThere DoneThat", 1);
