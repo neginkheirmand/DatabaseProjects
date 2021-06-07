@@ -5,4 +5,4 @@ INSERT INTO
 	Content, Sender, Receiver
   )
 SELECT
-  "Hi Heartbreaker, please don't break my heart" , "Heartbreaker", "newUserCreated"
+  "Hi newUserCreated, nice to meet you" , "newUserCreated", "Heartbreaker"

@@ -12,11 +12,11 @@ INSERT INTO
 	IDTweet, Sender, Receiver
   )
 SELECT
-  2 , "Heartbreaker", "Born Confused"
+  2 , "Heartbreaker", "newUserCreated"
 WHERE
 	NOT EXISTS (	SELECT * 
 					FROM blocked_data 
-					WHERE Blocked = "Heartbreaker" AND Blocker = "Born Confused") AND
+					WHERE Blocked = "Heartbreaker" AND Blocker = "newUserCreated") AND
 	NOT EXISTS(  	SELECT *
 					FROM blocked_data 
                     WHERE Blocked = "Heartbreaker" 
