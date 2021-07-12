@@ -1,0 +1,4 @@
+CREATE PROCEDURE `getListOfLogInsDesc` ()
+BEGIN
+
+END
