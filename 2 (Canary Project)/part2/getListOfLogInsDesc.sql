@@ -1,4 +1,9 @@
-CREATE PROCEDURE `getListOfLogInsDesc` ()
+delimiter $$
+CREATE PROCEDURE getListOfLogInsDesc ()
 BEGIN
-
-END
+	SELECT *
+	FROM LOGIN
+	ORDER BY LogInTime DESC;
+END $$
+delimiter ;
+call twitter.getListOfLogInsDesc();
