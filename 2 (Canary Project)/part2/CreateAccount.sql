@@ -15,6 +15,10 @@ BEGIN
                 WHERE user.Username = username_ ) 
 		then SELECT false into validation;
 	end IF;
+    if  user is null 
+    then select false into validation;
+    end if;
+    
 	IF (username_ is null or name_Of_User is null or surname_ is null or pass_ is null or Date_Of_Birth_ is null) 
 		then select false into validation;
     end IF;
