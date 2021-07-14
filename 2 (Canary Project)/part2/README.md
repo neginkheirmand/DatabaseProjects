@@ -8,4 +8,5 @@ getListOfLogInsDesc			-> not tested, not validated
 getListOfMyTweets			-> not tested, not validated
 followSomeUser				-> not tested, not validated
 stopFollowingUser			-> not tested, not validated
-BlockSomeUser			-> not tested, not validated
+BlockSomeUser				-> not tested, not validated
+stopBlockingSomeUser		-> not tested, not validated
