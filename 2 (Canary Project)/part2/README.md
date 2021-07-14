@@ -20,3 +20,5 @@ CREATE Tweet_LOG				-> not tested, not validated
 tweet_func								-> not tested, not validated
 after_tweet_trigger_1					-> not tested, not validated
 after_tweet_trigger_2_insert_hashtags	-> not tested, not validated
+
+used this https://www.oreilly.com/library/view/mysql-cookbook/0596001452/ch04s08.html for the regexp 
