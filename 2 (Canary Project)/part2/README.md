@@ -4,3 +4,6 @@ SET_log_bin_trust_function_creators ToOne.sql		->works babe
 CreateAcount.sql									->great
 after_createAccount_trigger_signup_data				-> great
 logInToPlatformQuery								->nice
+getListOfLogInsDesc			-> not tested
+getListOfMyTweets			-> not tested
+followSomeUser				-> not tested
