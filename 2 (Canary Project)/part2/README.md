@@ -17,4 +17,6 @@ CREATE Tweet_LOG				-> not tested, not validated
 
 			NEED TO ADD VALIDATION FOR USER IN ALL THE FUNCTIONS AND PROCEDURES
 			
-tweet_func						-> not tested, not validated
+tweet_func								-> not tested, not validated
+after_tweet_trigger_1					-> not tested, not validated
+after_tweet_trigger_2_insert_hashtags	-> not tested, not validated
