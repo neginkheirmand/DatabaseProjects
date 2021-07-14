@@ -16,3 +16,5 @@ CREATE Tweet_LOG				-> not tested, not validated
 
 
 			NEED TO ADD VALIDATION FOR USER IN ALL THE FUNCTIONS AND PROCEDURES
+			
+tweet_func						-> not tested, not validated
