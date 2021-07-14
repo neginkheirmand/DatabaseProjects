@@ -12,3 +12,4 @@ BlockSomeUser					-> not tested, not validated
 stopBlockingSomeUser			-> not tested, not validated
 getListOfFollowedByUserActivity	-> not tested, not validated
 getActivityOfSpecificUser		-> not tested, not validated
+CREATE Tweet_LOG				-> not tested, not validated
