@@ -1,4 +1,4 @@
-CREATE DEFINER=`root`@`localhost` FUNCTION `logInToPlatformQuery`(		username_ varchar(20),
+CREATE DEFINER=`root`@`localhost` FUNCTION `logInToPlatform`(		username_ varchar(20),
 											pass_ varchar(40)
 											) RETURNS int
 BEGIN
