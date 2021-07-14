@@ -1,8 +1,8 @@
-CREATE PROCEDURE followSomeUser (Followed_ VARCHAR(20))
+CREATE DEFINER=`root`@`localhost` PROCEDURE `followSomeUser`(Followed_ VARCHAR(20))
 BEGIN
 	DECLARE Follower_ VARCHAR(20);
     SET Follower_ = twitter.GetLastLogIn();
-    # follow someone for the user if isent already following that person
+    # follow someone for the user if isnt already following that person
 	INSERT INTO
 	  FOLLOWING_DATA (
 		Follower, Followed
