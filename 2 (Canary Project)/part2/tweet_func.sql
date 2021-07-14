@@ -9,8 +9,11 @@ BEGIN
 	if (LENGTH(Content_)>256 or user is null ) 
 		then select false into validation;
     end if;
-
-	INSERT INTO TWEET(Content, Username, ParentID)
-	VALUES 	(Content_, user, null);
-RETURN 1;
+    
+	IF (validation is TRUE) THEN
+		INSERT INTO TWEET(Content, Username, ParentID)
+		VALUES 	(Content_, user, null);
+		RETURN 1;
+	end IF;
+RETURN 0;
 END
