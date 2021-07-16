@@ -2,6 +2,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `getActivityOfSpecificUser`(specific
 BEGIN
 	DECLARE user VARCHAR(20);
     SET user = twitter.GetLastLogIn();
+    if user = null	THEN
+		select null;
+	end if;
     select *
 	from tweet
 	where Username = specificUser and 
