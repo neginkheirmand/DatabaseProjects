@@ -12,13 +12,16 @@ BlockSomeUser					-> not tested, not validated
 stopBlockingSomeUser			-> not tested, not validated
 getListOfFollowedByUserActivity	-> not tested, not validated
 getActivityOfSpecificUser		-> not tested, not validated
-CREATE Tweet_LOG				-> not tested, not validated
+CREATE Tweet_LOG				-> it a query to create table no need for validation
 
 
 			NEED TO ADD VALIDATION FOR USER IN ALL THE FUNCTIONS AND PROCEDURES
 			
-tweet_func								-> not tested, not validated
-after_tweet_trigger_1					-> not tested, not validated
-after_tweet_trigger_2_insert_hashtags	-> not tested, not validated
+tweet_func								-> works babe
+after_tweet_trigger_1					-> works yaiy
+after_tweet_trigger_2_insert_hashtags	-> this trigger calls the get Hashtag procedure which is supposed to add the hashtags on its own, No ned for validation , NOT TESTED THO
 
 used this https://www.oreilly.com/library/view/mysql-cookbook/0596001452/ch04s08.html for the regexp 
+
+
+getHashtags -> works like a charm
