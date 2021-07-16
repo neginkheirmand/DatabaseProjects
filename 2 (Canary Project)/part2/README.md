@@ -29,3 +29,4 @@ getHashtags -> works like a charm
 isUserBlocked 					-> function that return 1 if the user is blocked and 0 if its not, not tested
 getTweeter						-> function that returns the user of a tweet using tweetID and if tweet does not exist returns null
 createOpinionAsTweet			-> function that creates an opinion on a tweet if the data is valid and return 1 and if data is invalid returns 0
+getListOfOpinionsOverSpecificTweet	-> procedure that gets opinion over specific tweet, validated and tested
