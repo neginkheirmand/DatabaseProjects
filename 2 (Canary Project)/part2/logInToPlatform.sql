@@ -1,5 +1,5 @@
 CREATE DEFINER=`root`@`localhost` FUNCTION `logInToPlatform`(		username_ varchar(20),
-											pass_ varchar(40)
+											pass_ varchar(128)
 											) RETURNS int
 BEGIN
 	#first validate the input parameters
