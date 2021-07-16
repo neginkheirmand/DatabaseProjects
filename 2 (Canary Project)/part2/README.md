@@ -31,5 +31,6 @@ getTweeter						-> function that returns the user of a tweet using tweetID and i
 createOpinionAsTweet			-> function that creates an opinion on a tweet if the data is valid and return 1 and if data is invalid returns 0
 getListOfOpinionsOverSpecificTweet	-> procedure that gets opinion over specific tweet, validated and tested
 getLisTOfTweetsByHashtag			-> procedure that gets tweetswith specific hashtags on them, validated and tested
-likeTweet.sql						-> function to like a tweet
-getNumLikesOfTweet
+likeTweet							-> function to like a tweet
+getNumLikesOfTweet					-> function tested and validated
+getListOfLikedBy					-> function tested and validated
