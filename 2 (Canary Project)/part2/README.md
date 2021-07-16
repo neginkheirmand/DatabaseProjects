@@ -25,3 +25,5 @@ used this https://www.oreilly.com/library/view/mysql-cookbook/0596001452/ch04s08
 
 
 getHashtags -> works like a charm
+
+isUserBlocked 					-> function that return 1 if the user is blocked and 0 if its not, not tested
