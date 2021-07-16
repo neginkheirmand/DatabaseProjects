@@ -35,3 +35,5 @@ likeTweet							-> function to like a tweet
 getNumLikesOfTweet					-> function tested and validated
 getListOfLikedBy					-> function tested and validated
 getListOfPopularTweets				-> function tested
+sendMessage							->		the return of this function shows nothing
+sendMessageWithContent				->
