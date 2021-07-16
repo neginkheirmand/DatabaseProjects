@@ -34,3 +34,4 @@ getLisTOfTweetsByHashtag			-> procedure that gets tweetswith specific hashtags o
 likeTweet							-> function to like a tweet
 getNumLikesOfTweet					-> function tested and validated
 getListOfLikedBy					-> function tested and validated
+getListOfPopularTweets				-> function tested
