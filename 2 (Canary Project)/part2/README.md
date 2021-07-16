@@ -19,7 +19,7 @@ CREATE Tweet_LOG				-> it a query to create table no need for validation
 			
 tweet_func								-> works babe
 after_tweet_trigger_1					-> works yaiy
-after_tweet_trigger_2_insert_hashtags	-> this trigger calls the get Hashtag procedure which is supposed to add the hashtags on its own, No ned for validation , NOT TESTED THO
+after_tweet_trigger_2_insert_hashtags	-> this trigger calls the get Hashtag procedure	 which is supposed to add the hashtags on its own
 
 used this https://www.oreilly.com/library/view/mysql-cookbook/0596001452/ch04s08.html for the regexp 
 
