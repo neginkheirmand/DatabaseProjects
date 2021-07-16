@@ -37,3 +37,4 @@ getListOfLikedBy					-> function tested and validated
 getListOfPopularTweets				-> function tested
 sendMessage							->		the return of this function shows nothing, other than that works fine
 sendMessageWithContent				->		its ok, works fine
+getListOfMessagesFromAllUsers		-> tested validated, works fine
