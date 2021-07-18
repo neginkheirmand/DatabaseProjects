@@ -11,8 +11,9 @@
 	3- CREATE_LIKED_DATE.sql and CREATE_MESSAGE.sql
 		to create the LIKED_DATA and MESSAGE table
 		
-after initial step:
-![](https://github.com/neginkheirmand/DatabaseProjects/blob/master/2_Canary%20Project/part1/docomentation/step1.png?raw=true)
+after initial steps:
+
+![](https://github.com/neginkheirmand/DatabaseProjects/blob/master/2_Canary%20Project/part1/documentation/step1.png?raw=true)
 
 documentation for the project:
 [doc](https://github.com/neginkheirmand/DatabaseProjects/raw/master/2_Canary%20Project/part1/docomentation/canary%20project.pdf "doc")
@@ -21,11 +22,15 @@ documentation for the project:
 	initial sketch:
 	
 ![image](https://user-images.githubusercontent.com/56405454/126060924-7696f152-5de3-4223-8c7d-d6be045b6efb.png)
-raw initial sketch for the the data base here:
+link for initial sketch here:
 [initial_sketch](https://dbdiagram.io/d/6091ae5bb29a09603d136142 "initial_sketch")
 
 	ER diagram after implementation in mysql workbench:
-	
+![](https://github.com/neginkheirmand/DatabaseProjects/blob/master/2_Canary%20Project/part1/erd.png?raw=true)
+		raw file: [here](https://github.com/neginkheirmand/DatabaseProjects/blob/master/2_Canary%20Project/part1/ERD.mwb)
+
+
+
 ---
 
 
