@@ -1,12 +1,13 @@
-CREATE DEFINER=`root`@`localhost` FUNCTION `sendMessageWithContent`(receiver_ varchar(20), content_ varchar(256)) RETURNS int
+CREATE DEFINER=`root`@`localhost` FUNCTION `sendMessageWithContent`( receiver_ varchar(20), 
+		content_ varchar(256) ) RETURNS int
 BEGIN
 	DECLARE user_ VARCHAR(20);
     SET user_ = twitter.GetLastLogIn();
-    if user_ = null	THEN
+    if user_ is null	THEN
 		return 0;
 	end if;
     
-    if not exists(select * from user where username=receiver_ )then
+    if not exists(select * from user where user.username = receiver_ )then
 		return 0;
 	end if;
     
@@ -18,9 +19,9 @@ BEGIN
 	  Message (
 		Content, Sender, Receiver
 	  )
-	SELECT(
+	SELECT
 	  content_ , user_, receiver_
-	);
+	;
     
 RETURN 1;
 END
