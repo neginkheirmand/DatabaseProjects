@@ -24,7 +24,8 @@ documentation for the project:
 raw initial sketch for the the data base here:
 [initial_sketch](https://dbdiagram.io/d/6091ae5bb29a09603d136142 "initial_sketch")
 
-
+	ER diagram after implementation in mysql workbench:
+	
 ---
 
 
