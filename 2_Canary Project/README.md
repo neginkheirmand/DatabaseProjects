@@ -107,6 +107,8 @@ the primary key is log_id
 
 [phase1 doc](https://github.com/neginkheirmand/DatabaseProjects/raw/master/2_Canary%20Project/part1/documentation/canary%20project.pdf)
 
+to see phase1's readme file [clickme](https://github.com/neginkheirmand/DatabaseProjects/blob/master/2_Canary%20Project/part1/README.md)
+
 [phase2 doc](https://github.com/neginkheirmand/DatabaseProjects/raw/master/2_Canary%20Project/part2/%D8%B7%D8%B1%D8%AD%20%D9%BE%D8%B1%D9%88%DA%98%D9%87%20%D9%82%D9%86%D8%A7%D8%B1%DB%8C%20%D9%81%D8%A7%D8%B2%20%D8%AF%D9%88%D9%85.pdf)
 
 
