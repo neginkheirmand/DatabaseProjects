@@ -1,6 +1,6 @@
 # DatabaseProjects
 ### First Project
-[This](https://github.com/neginkheirmand/DatabaseProjects/tree/master/1) was the first project for a database class at Amirkabir University. The assignment was to create a simple redis -in memmory- database to become acquainted with the basics of data managing systems. The project was implemented using **redis** as in memmory database and **java** as programming language.
+[This](https://github.com/neginkheirmand/DatabaseProjects/tree/master/1) was the first project for a database class at Amirkabir University. The assignment was to create a simple **Redis** -in-memory- database to become acquainted with the basics of data managing systems. The project was implemented using Redis and **java** as a programming language.
 
 
 ### Last Project
